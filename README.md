@@ -49,4 +49,6 @@ python stock.py
 
 ```
 
+ Please input any stock ticker symbol and the progam will pull the applicable information and provide an investor sentiment.
+
 > NOTE: if you see an error like "ModuleNotFoundError: No module named '...'", it's because the given package isn't installed, so run the `pip` command above to ensure that package has been installed into the virtual environment.

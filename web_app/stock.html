@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>Results for stock {{ ticker }}</h2>
+
+    <p>Ticker {{ ticker }}</p>
+
+    <!-- TODO: consider using a table instead of a list -->
+    <!-- TODO: consider adding images using the provided icon urls -->
+    <ul>
+    {% for sentiment_score in median_df_fl1['final_confidence_fl'] %}
+        <li>{{ sentiment_score["Date"] }} | {{ sentiment_score["final_confidence_fl"] }}.upper() }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
+
