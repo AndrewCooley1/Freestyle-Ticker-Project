@@ -1,2 +1,4 @@
 pandas
 finvizfinance
+flair
+matplotlib
