@@ -3,6 +3,9 @@ from finvizfinance.quote import finvizfinance
 import flair
 import time
 import matplotlib.pyplot as plt
+from flask import Flask
+
+
 
 def lookup_ticker(ticker):
     stock = finvizfinance(ticker)
