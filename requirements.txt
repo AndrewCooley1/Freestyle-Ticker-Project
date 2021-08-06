@@ -2,4 +2,4 @@ pandas
 finvizfinance
 flair
 matplotlib
-flask
+Flask
