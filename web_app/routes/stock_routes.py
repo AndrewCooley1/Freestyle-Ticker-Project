@@ -1,9 +1,7 @@
 # web_app/routes/weather_routes.py
 
-from flask import Blueprint, request, jsonify, render_template, redirect, flash
-
+from flask import Blueprint, request,render_template
 from app.stock import lookup_ticker
-
 stock_routes = Blueprint("stock_routes", __name__)
 
 
@@ -14,7 +12,7 @@ def home():
 
 @stock_routes.route("/handle_request", methods=["POST"])
 def post_handler():
-    print("Post handler...")
+    print("handler...")
 
 
     print("FORM DATA:", dict(request.form))
