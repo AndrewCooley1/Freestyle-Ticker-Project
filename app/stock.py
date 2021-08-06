@@ -4,16 +4,7 @@ import flair
 import time
 import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
-
-
-
-
-    start_time = time.time()
-
-
-    # Lets get the news from the API 
-    ticker = input('Enter the ticker symbol for the stock: ')
+def lookup_ticker(ticker):
     stock = finvizfinance(ticker)
 
     news_df = stock.TickerNews()
@@ -58,6 +49,22 @@ if __name__ == "__main__":
 
     # calculate the median of sentiment score for each day
     median_df_fl1 = df1.groupby(['Date']).median()
+    return median_df_fl1
+
+
+
+if __name__ == "__main__":
+
+
+
+
+    start_time = time.time()
+
+
+    # Lets get the news from the API 
+    ticker = input('Enter the ticker symbol for the stock: ')
+    
+    median_df_fl1=lookup_ticker(ticker)
 
     # the user should see the scores in a printout on the screen
     print(median_df_fl1)
