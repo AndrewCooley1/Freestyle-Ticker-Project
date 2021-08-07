@@ -2,4 +2,8 @@ pandas
 finvizfinance
 flair
 matplotlib
+requests
 Flask
+
+
+pytest
